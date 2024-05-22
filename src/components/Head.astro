@@ -17,6 +17,7 @@ const socialImageURL = new URL(
 ---
 
 <meta charset="utf-8" />
+<meta name="robots" content="NOINDEX, NOFOLLOW" />
 <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
@@ -25,9 +26,16 @@ const socialImageURL = new URL(
 <title>{siteTitle}</title>
 
 <!-- Icons / Favicon -->
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link rel="manifest" href="/manifest.webmanifest" />
+<link rel="icon" href={`${import.meta.env.BASE_URL}/favicon.ico`} sizes="any" />
+<link
+    rel="icon"
+    href={`${import.meta.env.BASE_URL}/favicon.svg`}
+    type="image/svg+xml"
+/>
+<link
+    rel="manifest"
+    href={`${import.meta.env.BASE_URL}/manifest.webmanifest`}
+/>
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
@@ -83,33 +91,33 @@ const socialImageURL = new URL(
 />
 
 <!-- Sitemap -->
-<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="sitemap" href={`${import.meta.env.BASE_URL}/sitemap-index.xml}`} />
 
 <!-- RSS auto-discovery -->
 <link
     rel="alternate"
     type="application/rss+xml"
     title={siteConfig.title}
-    href="/rss.xml"
+    href={`${import.meta.env.BASE_URL}/rss.xml`}
 />
 
 <link
     rel="preload"
-    href="/fonts/RecMonoSemicasual-Regular.woff2"
+    href={`${import.meta.env.BASE_URL}/fonts/RecMonoSemicasual-Regular.woff2`}
     as="font"
     type="font/woff2"
     crossorigin
 />
 <link
     rel="preload"
-    href="/fonts/RecMonoSemicasual-Bold.woff2"
+    href={`${import.meta.env.BASE_URL}/fonts/RecMonoSemicasual-Bold.woff2`}
     as="font"
     type="font/woff2"
     crossorigin
 />
 <link
     rel="preload"
-    href="/fonts/RecMonoSemicasual-Italic.woff2"
+    href={`${import.meta.env.BASE_URL}/fonts/RecMonoSemicasual-Italic.woff2`}
     as="font"
     type="font/woff2"
     crossorigin
@@ -117,9 +125,8 @@ const socialImageURL = new URL(
 
 <link
     rel="preload"
-    href="/fonts/RecMonoSemicasual-BoldItalic.woff2"
+    href={`${import.meta.env.BASE_URL}/fonts/RecMonoSemicasual-BoldItalic.woff2`}
     as="font"
     type="font/woff2"
     crossorigin
 />
-<link rel="sitemap" href="/sitemap-index.xml" />

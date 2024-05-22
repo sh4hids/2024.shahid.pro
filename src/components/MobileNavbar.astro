@@ -1,9 +1,8 @@
 ---
 import { List } from '@phosphor-icons/react';
 
+import HeaderLink from '@/components/HeaderLink.astro';
 import { isActivePath } from '@/utils';
-
-import HeaderLink from './HeaderLink.astro';
 
 const currentPath = Astro.url.pathname;
 ---
@@ -13,7 +12,7 @@ const currentPath = Astro.url.pathname;
     <dialog
         data-mobile-navbar
         aria-label="mobile-menu"
-        class="open:animate-fade-in fixed inset-0 z-10 w-full rounded outline-none backdrop:bg-surface-2 backdrop:bg-opacity-80"
+        class="fixed inset-0 z-10 w-full rounded outline-none backdrop:bg-surface-2 backdrop:bg-opacity-80 open:animate-fade-in"
     >
         <nav class="menu-dialog-frame block">
             <button
@@ -22,35 +21,38 @@ const currentPath = Astro.url.pathname;
             >
                 Esc
             </button>
-            <HeaderLink href="/" isActive={isActivePath(currentPath, '')}>
+            <HeaderLink
+                href={`${import.meta.env.BASE_URL}/`}
+                isActive={isActivePath(currentPath, '')}
+            >
                 Home
             </HeaderLink>
             <HeaderLink
-                href="/about"
+                href={`${import.meta.env.BASE_URL}/about`}
                 isActive={isActivePath(currentPath, 'about')}
             >
                 About
             </HeaderLink>
             <HeaderLink
-                href="/projects"
+                href={`${import.meta.env.BASE_URL}/projects`}
                 isActive={isActivePath(currentPath, 'projects')}
             >
                 Projects
             </HeaderLink>
             <HeaderLink
-                href="/blog"
+                href={`${import.meta.env.BASE_URL}/blog`}
                 isActive={isActivePath(currentPath, 'blog')}
             >
                 Blog
             </HeaderLink>
             <HeaderLink
-                href="/uses"
+                href={`${import.meta.env.BASE_URL}/uses`}
                 isActive={isActivePath(currentPath, 'uses')}
             >
                 Uses
             </HeaderLink>
             <HeaderLink
-                href="/contact"
+                href={`${import.meta.env.BASE_URL}/contact`}
                 isActive={isActivePath(currentPath, 'contact')}
                 isLastItem={true}
             >

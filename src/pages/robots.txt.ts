@@ -5,7 +5,7 @@ User-agent: GPTBot
 Disallow: /
 
 User-agent: *
-Disallow:
+Disallow: /
 
 Sitemap: ${new URL('sitemap-index.xml', import.meta.env.SITE).href}
 `.trim();
