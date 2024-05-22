@@ -12,6 +12,20 @@
             "src": "/512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/maskable_icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/hd_hi.ico",
+            "sizes": "72x72 96x96 128x128 256x256"
+        },
+        {
+            "src": "/hd_hi.svg",
+            "sizes": "any"
         }
     ],
     "start_url": "/",
