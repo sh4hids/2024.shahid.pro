@@ -1,0 +1,22 @@
+---
+import { GithubLogo } from '@phosphor-icons/react';
+
+interface Props {
+    repository: string;
+}
+
+const { repository } = Astro.props;
+
+// const response = await fetch(`https://api.github.com/repos/${repository}`);
+const data = {}; // await response.json();
+
+const stars = Intl.NumberFormat('en', {
+    notation: 'compact',
+    maximumFractionDigits: 1,
+}).format(0);
+---
+
+<span class="flex items-center gap-2">
+    <GithubLogo className="h-5 w-5" />
+    {stars}
+</span>
