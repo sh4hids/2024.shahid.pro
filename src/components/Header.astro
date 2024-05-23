@@ -1,11 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 
-import logo from '@/assets/images/logo-base.svg';
 import HeaderLink from '@/components/HeaderLink.astro';
 import MobileNavbar from '@/components/MobileNavbar.astro';
 import ToggleTheme from '@/components/ThemeToggle.astro';
 import { isActivePath } from '@/utils';
+
+import logo from '../assets/images/logo-base.svg';
 
 const currentPath = Astro.url.pathname;
 ---

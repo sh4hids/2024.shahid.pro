@@ -3,44 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: 'Rec Mono Semicasual';
-        src: local('Rec Mono Semicasual Bold'), local('RecMonoSemicasual-Bold');
-        /* url('/fonts/RecMonoSemicasual-Bold.woff2') format('woff2'); */
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Rec Mono Semicasual';
-        src: local('Rec Mono Semicasual'), local('RecMonoSemicasual-Regular');
-        /* url('/fonts/RecMonoSemicasual-Regular.woff2') format('woff2'); */
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Rec Mono Semicasual';
-        src: local('Rec Mono Semicasual Bold Italic'),
-            local('RecMonoSemicasual-BoldItalic');
-        /* url('/fonts/RecMonoSemicasual-BoldItalic.woff2') format('woff2'); */
-        font-weight: bold;
-        font-style: italic;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Rec Mono Semicasual';
-        src: local('Rec Mono Semicasual Italic'),
-            local('RecMonoSemicasual-Italic');
-        /* url('/fonts/RecMonoSemicasual-Italic.woff2') format('woff2'); */
-        font-weight: normal;
-        font-style: italic;
-        font-display: swap;
-    }
-
     *,
     ::before,
     ::after {
@@ -79,7 +41,7 @@
     }
 
     body {
-        @apply mx-auto flex min-h-screen  flex-col bg-surface-0  font-mono text-base font-normal text-fg-0 antialiased;
+        @apply mx-auto flex min-h-screen flex-col bg-surface-0 font-mono text-base font-normal text-fg-0 antialiased;
     }
 
     a {
