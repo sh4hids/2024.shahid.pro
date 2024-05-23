@@ -26,16 +26,9 @@ const socialImageURL = new URL(
 <title>{siteTitle}</title>
 
 <!-- Icons / Favicon -->
-<link rel="icon" href={`${import.meta.env.BASE_URL}/favicon.ico`} sizes="any" />
-<link
-    rel="icon"
-    href={`${import.meta.env.BASE_URL}/favicon.svg`}
-    type="image/svg+xml"
-/>
-<link
-    rel="manifest"
-    href={`${import.meta.env.BASE_URL}/manifest.webmanifest`}
-/>
+<link rel="icon" href={`/favicon.ico`} sizes="any" />
+<link rel="icon" href={`/favicon.svg`} type="image/svg+xml" />
+<link rel="manifest" href={`/manifest.webmanifest`} />
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
@@ -91,7 +84,7 @@ const socialImageURL = new URL(
 />
 
 <!-- Sitemap -->
-<link rel="sitemap" href={`${import.meta.env.BASE_URL}/sitemap-index.xml}`} />
+<link rel="sitemap" href={`/sitemap-index.xml}`} />
 
 <!-- RSS auto-discovery -->
 
@@ -99,26 +92,26 @@ const socialImageURL = new URL(
     rel="alternate"
     type="application/rss+xml"
     title={siteConfig.title}
-    href={`${import.meta.env.BASE_URL}/rss.xml`}
+    href={`/rss.xml`}
 />
 
 <link
     rel="preload"
-    href={`${import.meta.env.BASE_URL}/fonts/RecMonoSemicasual-Regular.woff2`}
+    href={`/fonts/RecMonoSemicasual-Regular.woff2`}
     as="font"
     type="font/woff2"
     crossorigin
 />
 <link
     rel="preload"
-    href={`${import.meta.env.BASE_URL}/fonts/RecMonoSemicasual-Bold.woff2`}
+    href={`/fonts/RecMonoSemicasual-Bold.woff2`}
     as="font"
     type="font/woff2"
     crossorigin
 />
 <link
     rel="preload"
-    href={`${import.meta.env.BASE_URL}/fonts/RecMonoSemicasual-Italic.woff2`}
+    href={`/fonts/RecMonoSemicasual-Italic.woff2`}
     as="font"
     type="font/woff2"
     crossorigin
@@ -126,7 +119,7 @@ const socialImageURL = new URL(
 
 <link
     rel="preload"
-    href={`${import.meta.env.BASE_URL}/fonts/RecMonoSemicasual-BoldItalic.woff2`}
+    href={`/fonts/RecMonoSemicasual-BoldItalic.woff2`}
     as="font"
     type="font/woff2"
     crossorigin

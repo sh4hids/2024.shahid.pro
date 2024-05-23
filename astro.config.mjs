@@ -8,8 +8,8 @@ import { remarkPostMeta } from './src/utils/remark-post-meta.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://sh4hids.github.io/',
-    base: import.meta.env.DEV ? '.' : '/2024.shahid.pro',
+    site: 'https://v2024.shahid.pro/',
+    base: '/',
     integrations: [
         tailwind({
             applyBaseStyles: false,

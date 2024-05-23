@@ -15,10 +15,7 @@ const { remarkPluginFrontmatter } = await post.render();
 
 <div class="rounded-md border bg-surface-1 p-4 md:p-6">
     <Text class="pt-0 md:pt-0" variant="h4">
-        <a
-            href={`${import.meta.env.BASE_URL}/blog/${post.slug}`}
-            class="text-fg-0 no-underline"
-        >
+        <a href={`/blog/${post.slug}`} class="text-fg-0 no-underline">
             {post.data.title}
         </a>
     </Text>
@@ -34,7 +31,7 @@ const { remarkPluginFrontmatter } = await post.render();
     </div>
     <Text>
         {remarkPluginFrontmatter.excerpt}
-        <a href={`${import.meta.env.BASE_URL}/blog/${post.slug}`}>
+        <a href={`/blog/${post.slug}`}>
             {`read the post `}<ArrowRight className="inline-block" />
         </a>
     </Text>
