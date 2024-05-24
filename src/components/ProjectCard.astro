@@ -2,7 +2,7 @@
 import { ArrowRight } from '@phosphor-icons/react';
 import type { CollectionEntry } from 'astro:content';
 
-import GithubStargazer from '@/components/GithubStargazer.astro';
+import GithubStargazer from '@/components/GitHubStargazer';
 import LinkButton from '@/components/LinkButton.astro';
 import Text from '@/components/Text.astro';
 
@@ -31,6 +31,7 @@ const { project } = Astro.props;
                             repository={
                                 project.data.github?.split('github.com/')[1]
                             }
+                            client:load
                         />
                     </LinkButton>
                 </div>
