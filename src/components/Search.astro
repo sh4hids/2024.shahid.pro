@@ -2,9 +2,11 @@
 import '@pagefind/default-ui/css/ui.css';
 
 import { MagnifyingGlass } from '@phosphor-icons/react';
+
+import Text from '@/components/Text.astro';
 ---
 
-<site-search id="search" class="ms-auto">
+<site-search id="search" class="mx-auto">
     <button
         data-open-modal
         disabled
@@ -13,10 +15,22 @@ import { MagnifyingGlass } from '@phosphor-icons/react';
         <MagnifyingGlass className="relative top-[2px] h-5 w-5" />
         <span class="sr-only">Search</span>
     </button>
-    <dialog aria-label="search">
-        <button data-close-modal> Esc </button>
-
-        <div class="dialog-frame flex flex-col gap-4">
+    <dialog
+        aria-label="search"
+        class="fixed inset-0 z-10 min-h-[50vh] w-full rounded outline-none backdrop:bg-surface-2 backdrop:bg-opacity-80 open:animate-fade-in md:max-w-2xl lg:max-w-3xl"
+    >
+        <div
+            class="flex items-center justify-between px-4 pt-4 md:px-6 md:pt-6"
+        >
+            <Text class="p-0 font-bold">Search</Text>
+            <button
+                data-close-modal
+                class="rounded border bg-surface-1 px-2 py-1 text-xs outline-none"
+            >
+                Esc
+            </button>
+        </div>
+        <div class="dialog-frame flex flex-col gap-4 p-4 md:p-6">
             {
                 import.meta.env.DEV ? (
                     <div class="mx-auto text-center">
@@ -104,13 +118,6 @@ import { MagnifyingGlass } from '@phosphor-icons/react';
                             '/pagefind/',
                         showImages: false,
                         showSubResults: true,
-                        translations: {
-                            placeholder: 'রেসিপি খুঁজুন...',
-                            zero_results: `'[SEARCH_TERM]' এর জন্য কোন রেসিপি পাওয়া যায়নি`,
-                            load_more: 'আরও রেসিপি দেখুন',
-                            many_results: `'[SEARCH_TERM]' এর জন্য [COUNT] টি রেসিপি পাওয়া গেছে`,
-                            one_result: `'[SEARCH_TERM]' এর জন্য [COUNT] টি রেসিপি পাওয়া গেছে`,
-                        },
                     });
                 });
             }
@@ -140,4 +147,29 @@ import { MagnifyingGlass } from '@phosphor-icons/react';
     customElements.define('site-search', SiteSearch);
 </script>
 
-<style is:global></style>
+<style is:global>
+    #blog__search .pagefind-ui__search-input {
+        outline: none;
+        color: theme('colors.fg-0');
+        border-width: 1px;
+        font-family: theme('fontFamily.mono');
+    }
+
+    #blog__search .pagefind-ui__search-clear {
+        /* class="rounded border bg-surface-1 px-2 py-1 text-xs outline-none"
+ */
+        font-size: theme('fontSize.xs');
+        padding: 0.25rem 0.5rem;
+        background: theme('colors.surface-0');
+        border: theme('borderWidth.DEFAULT');
+        height: auto;
+        font-family: theme('fontFamily.mono');
+        top: 13px;
+        right: 16px;
+        border-radius: theme('borderRadius.DEFAULT');
+    }
+
+    #blog__search .pagefind-ui__result {
+        font-family: theme('fontFamily.mono');
+    }
+</style>
