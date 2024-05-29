@@ -20,5 +20,14 @@ export default defineConfig({
     ],
     markdown: {
         remarkPlugins: [remarkPostMeta],
+        shikiConfig: {
+            themes: {
+                light: 'snazzy-light',
+                dark: 'tokyo-night',
+            },
+            langs: [],
+            wrap: true,
+            transformers: [],
+        },
     },
 });
