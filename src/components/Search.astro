@@ -150,9 +150,6 @@ import Text from '@/components/Text.astro';
 <style is:global>
     #blog__search .pagefind-ui__search-input {
         outline: none;
-        color: theme('colors.fg-0');
-        border-width: 1px;
-        font-family: theme('fontFamily.mono');
     }
 
     #blog__search .pagefind-ui__search-clear {
@@ -160,16 +157,27 @@ import Text from '@/components/Text.astro';
  */
         font-size: theme('fontSize.xs');
         padding: 0.25rem 0.5rem;
-        background: theme('colors.surface-0');
-        border: theme('borderWidth.DEFAULT');
+        background: theme('colors.surface-1');
         height: auto;
-        font-family: theme('fontFamily.mono');
         top: 13px;
         right: 16px;
         border-radius: theme('borderRadius.DEFAULT');
     }
 
     #blog__search .pagefind-ui__result {
-        font-family: theme('fontFamily.mono');
+        color: theme('colors.fg-1');
+    }
+
+    #blog__search .pagefind-ui__result-link {
+        color: theme('colors.accent-0');
+    }
+
+    #blog__search {
+        --pagefind-ui-font: theme('fontFamily.mono');
+        --pagefind-ui-text: theme('colors.fg-0');
+        --pagefind-ui-background: theme('colors.surface-0');
+        --pagefind-ui-primary: theme('colors.accent-0');
+        --pagefind-ui-border: theme('colors.fg-2');
+        --pagefind-ui-border-width: 1px;
     }
 </style>
