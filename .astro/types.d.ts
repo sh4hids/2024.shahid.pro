@@ -173,7 +173,39 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		"projects": {
+		"plants": {
+"4inch-plant1": {
+	id: "4inch-plant1";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"inch-plant": {
+	id: "inch-plant";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"morning-glory-01": {
+	id: "morning-glory-01";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"periwinkle-01": {
+	id: "periwinkle-01";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"rose-01_2": {
+	id: "rose-01_2";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"rose-02_1": {
+	id: "rose-02_1";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+};
+"projects": {
 "bangla-calendar": {
 	id: "bangla-calendar";
   collection: "projects";

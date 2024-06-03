@@ -2,14 +2,23 @@
 import GridSection from '@/components/GridSection.astro';
 import HeroSection from '@/components/HeroSection.astro';
 import LinkButton from '@/components/LinkButton.astro';
+import PlantImage from '@/components/PlantImage.astro';
 import PostGrid from '@/components/PostGrid.astro';
 import ProjectGrid from '@/components/ProjectGrid.astro';
-import { getAllPosts, getAllProjects, sortPostByDate } from '@/data';
+import {
+    getAllPlants,
+    getAllPosts,
+    getAllProjects,
+    sortPostByDate,
+} from '@/data';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const projects = await getAllProjects();
 const posts = await getAllPosts();
+const plants = await getAllPlants();
 const sortedPosts = sortPostByDate(posts);
+
+console.log(plants);
 ---
 
 <BaseLayout meta={{ title: 'Home' }}>
@@ -34,6 +43,20 @@ const sortedPosts = sortPostByDate(posts);
                     </div>
                 )
             }
+        </GridSection>
+        <GridSection title="Pics from my garden">
+            <div
+                class="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 [&>img:not(:first-child)]:mt-8"
+            >
+                {
+                    plants.map((plant) => (
+                        <PlantImage
+                            fileName={`/src/assets/images/${plant.data.fileName}`}
+                            name={plant.data.name}
+                        />
+                    ))
+                }
+            </div>
         </GridSection>
     </div>
 </BaseLayout>
