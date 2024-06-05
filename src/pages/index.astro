@@ -44,19 +44,28 @@ console.log(plants);
                 )
             }
         </GridSection>
-        <GridSection title="Pics from my garden">
+        <GridSection title="Plants & Flowers">
             <div
-                class="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 [&>img:not(:first-child)]:mt-8"
+                class="columns-2 gap-4 sm:columns-3 md:gap-6 [&>img:not(:first-child)]:mt-8"
             >
                 {
-                    plants.map((plant) => (
-                        <PlantImage
-                            fileName={`/src/assets/images/${plant.data.fileName}`}
-                            name={plant.data.name}
-                        />
-                    ))
+                    plants
+                        .slice(0, 6)
+                        .map((plant) => (
+                            <PlantImage
+                                fileName={`/src/assets/images/${plant.data.fileName}`}
+                                name={plant.data.name}
+                            />
+                        ))
                 }
             </div>
+            {
+                plants.length > 6 && (
+                    <div class="pt-6 text-center">
+                        <LinkButton url="/gallery" label="View all photos" />
+                    </div>
+                )
+            }
         </GridSection>
     </div>
 </BaseLayout>

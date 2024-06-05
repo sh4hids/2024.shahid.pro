@@ -174,8 +174,8 @@ declare module 'astro:content' {
 
 	type DataEntryMap = {
 		"plants": {
-"4inch-plant1": {
-	id: "4inch-plant1";
+"asian-pigeonwings-01": {
+	id: "asian-pigeonwings-01";
   collection: "plants";
   data: InferEntrySchema<"plants">
 };
@@ -194,13 +194,63 @@ declare module 'astro:content' {
   collection: "plants";
   data: InferEntrySchema<"plants">
 };
-"rose-01_2": {
-	id: "rose-01_2";
+"portulaca-01": {
+	id: "portulaca-01";
   collection: "plants";
   data: InferEntrySchema<"plants">
 };
-"rose-02_1": {
-	id: "rose-02_1";
+"portulaca-02": {
+	id: "portulaca-02";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"portulaca-03": {
+	id: "portulaca-03";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"portulaca-04": {
+	id: "portulaca-04";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"portulaca-05": {
+	id: "portulaca-05";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"portulaca-06": {
+	id: "portulaca-06";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"portulaca-07": {
+	id: "portulaca-07";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"portulaca-08": {
+	id: "portulaca-08";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"rain-lily-01": {
+	id: "rain-lily-01";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"rose-01": {
+	id: "rose-01";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"rose-02": {
+	id: "rose-02";
+  collection: "plants";
+  data: InferEntrySchema<"plants">
+};
+"water-lily-01": {
+	id: "water-lily-01";
   collection: "plants";
   data: InferEntrySchema<"plants">
 };
