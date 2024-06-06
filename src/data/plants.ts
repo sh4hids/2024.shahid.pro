@@ -1,7 +1,5 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 
-export type ItemWithCount = [string, number];
-
 export const getAllPlants = async () => {
     return await getCollection('plants', ({ data }) => {
         return import.meta.env.PROD ? data.isPublished !== false : true;
