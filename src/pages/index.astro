@@ -17,8 +17,6 @@ const projects = await getAllProjects();
 const posts = await getAllPosts();
 const plants = await getAllPlants();
 const sortedPosts = sortPostByDate(posts);
-
-console.log(plants);
 ---
 
 <BaseLayout meta={{ title: 'Home' }}>
@@ -46,7 +44,7 @@ console.log(plants);
         </GridSection>
         <GridSection title="Plants & Flowers">
             <div
-                class="columns-2 gap-4 sm:columns-3 md:gap-6 [&>img:not(:first-child)]:mt-8"
+                class="columns-3 gap-4 sm:gap-6 [&>img:not(:first-child)]:mt-4 sm:[&>img:not(:first-child)]:mt-6"
             >
                 {
                     plants
