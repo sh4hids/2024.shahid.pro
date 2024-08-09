@@ -64,6 +64,10 @@
         --theme-primary: 79 70 229;
         --theme-accent-0: 67 56 202;
         --theme-accent-1: 55 48 163;
+
+        .astro-code {
+            @apply border border-surface-2/10;
+        }
     }
 
     :root[data-theme='dark'] {
@@ -77,6 +81,10 @@
         --theme-primary: 79 70 229;
         --theme-accent-0: 129 140 248;
         --theme-accent-1: 165 180 252;
+
+        .astro-code {
+            @apply border border-surface-2/70;
+        }
 
         .astro-code,
         .astro-code span {
@@ -98,10 +106,10 @@
     }
 
     a {
-        @apply text-accent-0 underline ease-in-out;
+        @apply underline decoration-fg-2/60 decoration-dashed decoration-2 underline-offset-8 ease-in-out;
     }
 
     a:hover {
-        @apply text-accent-1;
+        @apply text-accent-1 decoration-accent-1;
     }
 }
