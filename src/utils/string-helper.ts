@@ -3,6 +3,7 @@ export const BrandNames = {
     s3: 'S3',
     github: 'GitHub',
     javascript: 'JavaScript',
+    gatsby: 'Gatsby',
 } as const;
 
 export function replaceAll(text: string, correctWords: Record<string, string>) {
